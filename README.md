@@ -3,10 +3,17 @@ Flask-Intro
 
 Sample code from my "Introduction to Flask" presentation. The slides for this presentation are available at [https://speakerdeck.com/miguelgrinberg/introduction-to-flask](https://speakerdeck.com/miguelgrinberg/introduction-to-flask).
 
+
+Repositories
+------------
+- Migrate
+
 Requirements
 ------------
 
-- Flask (`pip install flask`) is required for all the examples.
+- flask-migrate: app example to demonstrate the migrations steps using alembic
+- flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
+- flask-redis: app that show the use of redis in a simple way
 
 Installation
 ------------
