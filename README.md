@@ -29,3 +29,13 @@ For examples 1-6:
 For example 7:
 
     (venv) $ python manage.py
+
+Repositories
+--------------------
+flask-migrate
+
+flask-pymongo
+
+flask-redis
+
+flask-sqlite
