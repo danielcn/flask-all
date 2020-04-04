@@ -1,0 +1,15 @@
+flask-logging:
+  build: ./flask-login-decorator/
+  command: python "echo"
+  volumes:
+    - .:/code
+  ports:
+    - "5000:5000"
+
+flask-login-decorator:
+  build: ./flask-login-decorator/
+  command: python "echo"
+  volumes:
+    - .:/code
+  ports:
+    - "5001:5001"
