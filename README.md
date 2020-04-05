@@ -24,6 +24,16 @@ You can create a virtual environment and install the required packages with the 
     $ . venv/bin/activate
     (venv) $ pip install -r requirements.txt
 
+Running on Docker
+--------------------
+
+Since we have enabled each project folder with Docker, we cab up each service with the containers.
+
+docker up
+
+docker up projec-name
+
+
 Running the Examples
 --------------------
 
