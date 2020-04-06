@@ -11,9 +11,15 @@ Repositories
 Requirements
 ------------
 
+- flask-logging:
+- flask-login-decorator:
 - flask-migrate: app example to demonstrate the migrations steps using alembic
 - flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
 - flask-redis: app that show the use of redis in a simple way
+- flask-rest-sqlite:
+- flask-session:
+- flask-sqlite:
+
 
 Installation
 ------------
@@ -29,9 +35,13 @@ Running on Docker
 
 Since we have enabled each project folder with Docker, we cab up each service with the containers.
 
-docker up
+For running all:
 
-docker up projec-name
+    $ docker up
+
+For running a specific:
+
+    $ docker up flask-login
 
 
 Running the Examples
@@ -50,11 +60,12 @@ For example 7:
 
 Repositories
 --------------------
+
+flask-logging
+flask-login-decorator
 flask-migrate
-
 flask-pymongo
-
 flask-redis
-
+flask-rest-sqlite
+flask-session
 flask-sqlite
-
