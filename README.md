@@ -16,7 +16,7 @@ Requirements
 - flask-migrate: app example to demonstrate the migrations steps using alembic
 - flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
 - flask-redis: app that show the use of redis in a simple way
-- flask-rest-sqlite:
+- flask-rest-sqlite: a simple rest app builded using sqlite
 - flask-session:
 - flask-sqlite:
 
