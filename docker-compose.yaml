@@ -1,5 +1,5 @@
 flask-logging:
-  build: ./flask-login-decorator/
+  build: ./flask-login-logging/
   command: python "echo"
   volumes:
     - .:/code
