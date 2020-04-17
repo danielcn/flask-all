@@ -13,3 +13,11 @@ flask-login-decorator:
     - .:/code
   ports:
     - "5001:5001"
+
+flask-rest-sqlite:
+  build: ./flask-rest-sqlite/
+  command: python "echo"
+  volumes:
+    - .:/code
+  ports:
+    - "5002:5002"
