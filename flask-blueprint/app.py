@@ -3,16 +3,21 @@ from flask import Flask, Blueprint
 from .service1 import service1
 from .service1 import service2
 
-service1 = Blueprint('service1', __name__)
-service2 = Blueprint('service2', __name__)
+def create_app():
+    """Initialize the core application."""
+    app = Flask(__name__, instance_relative_config=False)
+    app.config.from_object('config.Config')
 
-app = Flask()
-app.register_blueprint(service1)
-app.register_blueprint(service2)
+    with app.app_context():
+        # Include our Routes
+        from . import routes
 
-@app.route('/')
-def index():
-    return 'Hello, world!'
+        # Register Blueprints
+        app.register_blueprint(service1)
+        app.register_blueprint(service2)
+
+        return app
 
 if __name__ == '__main__':
+    app = create_app()
     app.run(debug=True)
