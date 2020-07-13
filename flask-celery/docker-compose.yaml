@@ -1,7 +1,8 @@
 # Docker-compose for Graylog
 
 rabbit1:
-  image: "rabbitmq:3-management"
+  # image: "rabbitmq:3-management"
+  buil: ./Dockerfile
   hostname: "rabbit1"
   environment:
     RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
