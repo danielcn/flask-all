@@ -1,6 +1,6 @@
 flask-logging:
   build: ./flask-login-logging/
-  command: python "echo"
+  command: python "echo login logggin"
   volumes:
     - .:/code
   ports:
@@ -8,7 +8,7 @@ flask-logging:
 
 flask-login-decorator:
   build: ./flask-login-decorator/
-  command: python "echo"
+  command: python "echo flask login decorator"
   volumes:
     - .:/code
   ports:
@@ -16,7 +16,15 @@ flask-login-decorator:
 
 flask-rest-sqlite:
   build: ./flask-rest-sqlite/
-  command: python "echo"
+  command: python "echo flask rest sqlite"
+  volumes:
+    - .:/code
+  ports:
+    - "5002:5002"
+
+flask-cache:
+  build: ./flask-cache/
+  command: python "echo flask celery"
   volumes:
     - .:/code
   ports:
