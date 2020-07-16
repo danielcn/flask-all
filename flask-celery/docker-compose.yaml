@@ -28,6 +28,6 @@ services:
     networks:
       - app-tier
   myapp:
-    image: 'YOUR_APPLICATION_IMAGE'
+    image: 'myapp:latest'
     networks:
       - app-tier
