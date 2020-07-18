@@ -1,9 +1,11 @@
 import os
 import logging
 
-from src.logger.logger.logger_handler import LoggerHandler
+from logger.logger_handler import LoggerHandler
 
 from flask import Flask
+
+app = Flask(__name__)
 
 @app.route('/')
 def index():

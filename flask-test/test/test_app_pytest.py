@@ -15,4 +15,3 @@ def test_index_with_parameter():
     with app.test_client() as client:
         rv = client.get('/?age=42')
         assert request.args['age'] == '42'
-
