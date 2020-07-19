@@ -12,6 +12,7 @@ Requirements
 ------------
 
 - flask-logging:
+- flask-celery:
 - flask-login-decorator:
 - flask-migrate: app example to demonstrate the migrations steps using alembic
 - flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
