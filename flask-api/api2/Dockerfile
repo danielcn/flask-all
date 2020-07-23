@@ -7,6 +7,6 @@ WORKDIR /app
 RUN pip install pipenv
 RUN pipenv install
 
-EXPOSE 5000
+EXPOSE 5002
 
 CMD ["pipenv", "run", "python", "app.py"]
