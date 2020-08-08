@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint
 
-from .service1 import service1
-from .service1 import service2
+from service1.service import service1
+from service2.service import service2
 
 def create_app():
     """Initialize the core application."""
