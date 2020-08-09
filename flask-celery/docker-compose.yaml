@@ -1,6 +1,32 @@
 # Docker-compose for Graylog
 
-rabbit1:
+version: '3'
+services:
+  api1:
+    build: ./api1
+    container_name: "app1"
+    restart: always
+    ports:
+        - "5001:5001"
+  api2:
+    build: ./api2
+    container_name: "app2"
+    restart: always
+    ports:
+        - "5002:5002"
+    depends_on:
+      - api1
+
+  rabbitmq:
+    image: 'bitnami/rabbitmq:latest'
+    networks:
+      - app-tier
+  myapp:
+    image: 'myapp:latest'
+    networks:
+      - app-tier
+
+  rabbit1:
   # image: "rabbitmq:3-management"
   buil: ./Dockerfile
   hostname: "rabbit1"
@@ -16,18 +42,7 @@ rabbit1:
     NAME: "rabbitmq1"
   volumes:
     - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
-version: '2'
-
-networks:
-  app-tier:
-    driver: bridge
-
-services:
-  rabbitmq:
-    image: 'bitnami/rabbitmq:latest'
-    networks:
-      - app-tier
-  myapp:
-    image: 'myapp:latest'
-    networks:
-      - app-tier
+    
+  networks:
+    app-tier:
+      driver: bridge
