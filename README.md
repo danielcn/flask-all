@@ -11,30 +11,20 @@ Repositories
 Requirements
 ------------
 
-- flask-logging:
-- flask-celery:
-- flask-login-decorator:
+- flask-api: show how to build an api
+- flask-blueprint: this how to separete endpoits using blueprints
+- flask-cache: this app show how to use the default config for redis
+- flask-celery: app with defined tasks to add paralelization with celery library
+- flask-jwt: app to perfom authentitacion using jwt
+- flask-logging: using logging library to add and get logs
+- flask-login-decorator: app axample to demostrate how to use decorator for login
 - flask-migrate: app example to demonstrate the migrations steps using alembic
 - flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
 - flask-redis: app that show the use of redis in a simple way
 - flask-rest-sqlite: a simple rest app builded using sqlite
 - flask-session: controling sessions
 - flask-sqlite: database for sqlite
-
-
-flask-api: show how to build an api
-flask-blueprint: this how to separete endpoits using blueprints
-flask-cache: this app show how to use the default config for redis
-flask-celery: app with defined tasks to add paralelization with celery library
-flask-logging: using logging library to add and get logs
-flask-login-decorator: app axample to demostrate how to use decorator for login
-flask-migrate: app example to demonstrate the migrations steps using alembic
-flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
-flask-redis: app that show the use of redis in a simple way
-flask-rest-sqlite: a simple rest app builded using sqlite
-flask-session: controling sessions
-flask-sqlite: database for sqlite
-flask-test: test example using unittest and pytest
+- flask-test: test example using unittest and pytest
 
 Details
 ------------
@@ -86,6 +76,7 @@ flask-api
 flask-blueprint
 flask-cache
 flask-celery
+flask-jwt
 flask-logging
 flask-login-decorator
 flask-migrate
