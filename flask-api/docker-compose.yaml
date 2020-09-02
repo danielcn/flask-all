@@ -3,13 +3,13 @@ services:
   api1:
     build: ./api1
     container_name: "app1"
-    restart: always
+    # restart: always
     ports:
         - "5001:5001"
   api2:
     build: ./api2
     container_name: "app2"
-    restart: always
+    # restart: always
     ports:
         - "5002:5002"
     depends_on:
