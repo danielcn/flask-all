@@ -1,5 +1,6 @@
 from celery import celery
 from time import sleep
+from flask import Flask
 
 app  = Celery('tasks', 
   broker=app.config['CELERY_BROKER_URL'],
