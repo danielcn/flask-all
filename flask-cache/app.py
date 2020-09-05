@@ -1,29 +1,3 @@
-# from flask import Flask
-# from flask_caching import Cache
-
-# cache = Cache()
-
-# def create_app():
-#   app = Flask(__name__)
-
-#   app.config['CACHE_TYPE'] = 'simple'
-#   cache.init_app(app)
-
-#   return app
-
-# # app = create_app()
-
-# @app.route('/')
-# # @cache.cached(timout=10)
-# def index():
-#   randnum=raninit(1,1000)
-#   return f'<h1>The number is:{randnum}<h1>'
-
-
-# def calculate():
-#   return
-
-
 from flask import Flask
 from flask_caching import Cache
 
@@ -46,4 +20,3 @@ def index():
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
 
-# https://www.youtube.com/watch?v=iO0sL6Vyfps&feature=em-uploademail
