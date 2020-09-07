@@ -1,14 +1,15 @@
-Flask-Intro
+Flask-Examples
 ===========
 
-Sample code from my "Introduction to Flask" presentation. The slides for this presentation are available at [https://speakerdeck.com/miguelgrinberg/introduction-to-flask](https://speakerdeck.com/miguelgrinberg/introduction-to-flask).
+Sample code from my "Introduction to Flask" presentation. 
+The slides for this presentation are available at [https://speakerdeck.com/miguelgrinberg/introduction-to-flask](https://speakerdeck.com/miguelgrinberg/introduction-to-flask).
 
 
 Repositories
 ------------
 - Migrate
 
-Requirements
+Repositories description
 ------------
 
 - flask-api: show how to build an api
@@ -31,7 +32,6 @@ Details
 
 All those applications should be dockerized and in some case use docker compose to compose the needed dependencies
 
-
 Installation
 ------------
 
@@ -44,15 +44,16 @@ You can create a virtual environment and install the required packages with the 
 Running on Docker
 --------------------
 
-Since we have enabled each project folder with Docker, we cab up each service with the containers.
+Since we have enabled each project folder with Docker, we cab up some of those services using docker composer.
 
-For running all:
+Running all registered:
 
-    $ docker up
+    $ docker-composer up
 
-For running a specific:
+Running a specific:
 
-    $ docker up flask-login
+    $ cd flask-api
+    $ docker-composer up flask-api
 
 
 Running the Examples
@@ -62,7 +63,9 @@ With the virtual environment activated you can `cd` into any of the examples and
 
 For examples 1-6:
 
-    (venv) $ python hello.py
+    $ pipenv shell
+    (venv) $ pipenv install
+    (venv) $ python app.py
 
 For example 7:
 
@@ -72,17 +75,30 @@ For example 7:
 Repositories
 --------------------
 
-flask-api
-flask-blueprint
-flask-cache
-flask-celery
-flask-jwt
-flask-logging
-flask-login-decorator
-flask-migrate
-flask-pymongo
-flask-redis
-flask-rest-sqlite
-flask-session
-flask-sqlite
-flask-test
+[flask-api](https://github.com/danielcn/flask-all/tree/master/flask-api)
+
+[flask-blueprint](https://github.com/danielcn/flask-all/tree/master/flask-blueprint)
+
+[flask-cache](https://github.com/danielcn/flask-all/tree/master/flask-cache)
+
+[flask-celery](https://github.com/danielcn/flask-all/tree/master/flask-celery)
+
+[flask-jwt](https://github.com/danielcn/flask-all/tree/master/flask-jwt)
+
+[flask-logging](https://github.com/danielcn/flask-all/tree/master/flask-logging)
+
+[flask-login-decorator](https://github.com/danielcn/flask-all/tree/master/flask-login-decorator)
+
+[flask-migrate](https://github.com/danielcn/flask-all/tree/master/flask-migrate)
+
+[flask-pymongo](https://github.com/danielcn/flask-all/tree/master/flask-pymongo)
+
+[flask-redis](https://github.com/danielcn/flask-all/tree/master/flask-redis)
+
+[flask-rest-sqlite](https://github.com/danielcn/flask-all/tree/master/flask-rest-sqlite)
+
+[flask-session](https://github.com/danielcn/flask-all/tree/master/flask-session)
+
+[flask-sqlite](https://github.com/danielcn/flask-all/tree/master/flask-sqlite)
+
+[flask-test](https://github.com/danielcn/flask-all/tree/master/flask-test)
