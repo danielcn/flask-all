@@ -1,9 +1,10 @@
 import smtplib
 from email.mime.text import MIMEText
 
+PORT = 2525
+SMTP_SERVER = 'smtp.mailtrap.io'
+
 def send_mail(message):
-    port = 2525
-    smtp_server = 'smtp.mailtrap.io'
     login = ''
     password = ''
     message = f"<h3>New Feedback Submission</h3><ul><li>Message: {customer}</li></ul>"
@@ -15,6 +16,6 @@ def send_mail(message):
     msg['From'] = sender_email
     msg['To'] = receiver_email
 
-    with smtplib.SMTP(smtp_server, port) as server:
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
         server.login(login, password)
         server.sendmail(sender_email, receiver_email, msg.as_string())
