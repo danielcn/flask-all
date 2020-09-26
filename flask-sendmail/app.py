@@ -13,5 +13,10 @@ def submit():
         message = request.form['message']
         send_mail("Messagge: {}".format(message))
 
+@app.route('/confirm', methods=['POST'])
+def confirm():
+    return 'token validation'
+
+
 if __name__ == '__main__':
     app.run()
