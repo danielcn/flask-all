@@ -1,0 +1,26 @@
+version: '3'
+services:
+  # web:
+  #   build: .
+  #   command: gunicorn -b 0.0.0.0:8000 todosapp.wsgi:application
+  #   depends_on:
+  #     - postgres
+  #   volumes:
+  #     - .:/usr/src/app
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     DATABASE_URL: postgres://experiment@postgres/todos
+  db:
+    image: 'postgres:latest'
+    ports:
+      - "5432:5432"
+    environment:
+      # POSTGRES_DB: base123
+      # POSTGRES_USER: experiment
+      POSTGRES_PASSWORD: pw1234
+  app:
+    restart: always
+    build: .    
+    depends_on:
+      - db
