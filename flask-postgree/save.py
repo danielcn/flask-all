@@ -1,24 +1,25 @@
 import psycopg2
 
-# create routes
-# creates services
-# creates database structure for pdf
+DATABASE_NAME='mytest'
+DATABASE_PASSWORD='pw1234'
+DATABASE_USER='postgres'
+DATABASE_HOST='0.0.0.0'
 
 
-load_csv_to_database():
-    
+def database_connection():
+    connection = psycopg2.connect(database=DATABASE_NAME, user=DATABASE_USER, host=DATABASE_HOST, password=DATABASE_PASSWORD)
+    return connection
+
+def seed_csv():
     con = None
-
-    try:
-        # con = psycopg2.connect(database='testdb', user='postgres', password='s$cret')
-        
-        connection = psycopg2.connect(database='mytest', user='postgres', host='0.0.0.0', password='pw1234')
+    try:    
+        connection = database_connection()
         print(connection)
         cursor = connection.cursor()
         print(cursor)
 
         file = open('data.csv')
-        cursor.copy_from(file=file, table='contrib', columns=('Id', 'Name', 'Contribution'), sep=",")
+        cursor.copy_from(file=file, table=TABLE_NAME, columns=('Id', 'Name', 'Contribution'), sep=",")
         
         cursor.execute('SELECT version()')
         version = cursor.fetchone()[0]
@@ -32,17 +33,14 @@ load_csv_to_database():
         if connection:
             connection.close()
 
-
 def select():
-
-    connection = psycopg2.connect(database='mytest', user='postgres', host='0.0.0.0', password='pw1234')
+    connection = database_connection()
     print(connection)
     cursor = connection.cursor()
     print(cursor)
 
     try:
-        # result = cursor.execute('SELECT * FROM test_table')
-        result = cursor.execute('SELECT * FROM contrib')
+        result = cursor.execute('SELECT * FROM test_table')
         print(result)
         print(cursor.fetchone())
         # rows_to_fetch = 3
@@ -52,7 +50,7 @@ def select():
         print(error.message)
 
 def insert():
-    connection = psycopg2.connect(database='mytest', user='postgres', host='0.0.0.0', password='pw1234')
+    connection = database_connection()
     print(connection)
     cursor = connection.cursor()
     print(cursor)
@@ -62,10 +60,12 @@ def insert():
     print(result)
 
 def delete():
-    connection = psycopg2.connect(database='mytest', user='postgres', host='0.0.0.0', password='pw1234')
+    connection = database_connection()
     print(connection)
     result = cursor.execute("DELETE * FROM contrib (something) WHERE [123]")
     print(result)
     
-# load_csv_to_database()
-select()
+# seed_csv()
+# select()
+# insert()
+# delete()

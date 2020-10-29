@@ -1,4 +1,4 @@
-FROM python:3.7.5-slim-stretch
+FROM python:3.8.6-slim-buster
 
 RUN mkdir /app
 COPY . /app
@@ -7,4 +7,4 @@ WORKDIR /app
 RUN pip install pipenv
 RUN pipenv install
 
-CMD ["python", "base.py"]
+CMD ["pipenv", "run", "python", "app.py"]
