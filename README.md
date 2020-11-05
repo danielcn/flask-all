@@ -29,7 +29,8 @@ Repositories description
 - flask-sendmail: example of sendmail app
 - flask-session: controling sessions
 - flask-sqlite: database for sqlite
-- flask-test: test example using unittest and pytest
+- flask-test: test example using unitiitest and pytest
+
 
 Details
 ------------
