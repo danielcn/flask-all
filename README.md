@@ -16,14 +16,17 @@ Repositories description
 - flask-blueprint: this how to separete endpoits using blueprints
 - flask-cache: this app show how to use the default config for redis
 - flask-celery: app with defined tasks to add paralelization with celery library
+- flask-feedback-app: general feedback app example
 - flask-jwt: app to perfom authentitacion using jwt
 - flask-logging: using logging library to add and get logs
 - flask-login-decorator: app axample to demostrate how to use decorator for login
 - flask-migrate: app example to demonstrate the migrations steps using alembic
-- flask-rabbitmq: app to work with queues  in mongo db using flask
-- flask-test: test example using unitiitest and pytest
+- flask-postgree: app exaple using postgree database
+- flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
+- flask-rabbitmq: connect to rabbitmq message queue mechanism
 - flask-redis: app that show the use of redis in a simple way
 - flask-rest-sqlite: a simple rest app builded using sqlite
+- flask-sendmail: example of sendmail app
 - flask-session: controling sessions
 - flask-sqlite: database for sqlite
 - flask-test: test example using unitiitest and pytest
@@ -85,6 +88,8 @@ Repositories
 
 [flask-celery](https://github.com/danielcn/flask-all/tree/master/flask-celery)
 
+[flask-feedback-app](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
 [flask-jwt](https://github.com/danielcn/flask-all/tree/master/flask-jwt)
 
 [flask-logging](https://github.com/danielcn/flask-all/tree/master/flask-logging)
@@ -93,11 +98,17 @@ Repositories
 
 [flask-migrate](https://github.com/danielcn/flask-all/tree/master/flask-migrate)
 
+[flask-postgree](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
 [flask-pymongo](https://github.com/danielcn/flask-all/tree/master/flask-pymongo)
+
+[flask-rabbitmq](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 [flask-redis](https://github.com/danielcn/flask-all/tree/master/flask-redis)
 
 [flask-rest-sqlite](https://github.com/danielcn/flask-all/tree/master/flask-rest-sqlite)
+
+[flask-sendmail](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 [flask-session](https://github.com/danielcn/flask-all/tree/master/flask-session)
 
