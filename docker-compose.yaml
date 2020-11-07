@@ -28,4 +28,4 @@ flask-cache:
   volumes:
     - .:/code
   ports:
-    - "5002:5002"
+    - "5002:5001"
