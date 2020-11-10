@@ -14,6 +14,14 @@ flask-login-decorator:
   ports:
     - "5001:5001"
 
+flask-redis:
+  build: ./flask-redis/
+  command: python "echo flask rest sqlite"
+  volumes:
+    - .:/code
+  ports:
+    - "5001:5001"
+
 flask-rest-sqlite:
   build: ./flask-rest-sqlite/
   command: python "echo flask rest sqlite"
