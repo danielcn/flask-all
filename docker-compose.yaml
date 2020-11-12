@@ -1,10 +1,18 @@
-flask-logging:
-  build: ./flask-login-logging/
-  command: python "echo login logggin"
+flask-cache:
+  build: ./flask-cache/
+  command: python "echo flask cache"
   volumes:
     - .:/code
   ports:
-    - "5000:5000"
+    - "5001:5001"
+
+flask-logging:
+  build: ./flask-login-logging/
+  command: python "echo flask logggin"
+  volumes:
+    - .:/code
+  ports:
+    - "5002:5000"
 
 flask-login-decorator:
   build: ./flask-login-decorator/
@@ -12,15 +20,15 @@ flask-login-decorator:
   volumes:
     - .:/code
   ports:
-    - "5001:5001"
+    - "5003:5000"
 
 flask-redis:
   build: ./flask-redis/
-  command: python "echo flask rest sqlite"
+  command: python "echo flask redis"
   volumes:
     - .:/code
   ports:
-    - "5001:5001"
+    - "5004:5000"
 
 flask-rest-sqlite:
   build: ./flask-rest-sqlite/
@@ -28,12 +36,12 @@ flask-rest-sqlite:
   volumes:
     - .:/code
   ports:
-    - "5002:5002"
+    - "5005:5000"
 
-flask-cache:
-  build: ./flask-cache/
-  command: python "echo flask celery"
+flask-sendmail:
+  build: ./flask-sendmail/
+  command: python "echo flask send mail"
   volumes:
     - .:/code
   ports:
-    - "5002:5001"
+    - "5006:5000"
