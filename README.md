@@ -22,6 +22,7 @@ Repositories description
 - flask-login-decorator: app axample to demostrate how to use decorator for login
 - flask-migrate: app example to demonstrate the migrations steps using alembic
 - flask-postgree: app exaple using postgree database
+- flask-probes: app to simulatef probes endpoints
 - flask-pymongo: app exmple to demostrate how to connectioon in mongo db using flask
 - flask-rabbitmq: connect to rabbitmq message queue mechanism
 - flask-redis: app that show the use of redis in a simple way
@@ -99,6 +100,8 @@ Repositories
 [flask-migrate](https://github.com/danielcn/flask-all/tree/master/flask-migrate)
 
 [flask-postgree](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+[flask-probes](https://github.com/danielcn/flask-all/tree/master/flask-probes)
 
 [flask-pymongo](https://github.com/danielcn/flask-all/tree/master/flask-pymongo)
 
