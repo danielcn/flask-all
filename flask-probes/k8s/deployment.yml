@@ -9,13 +9,26 @@ spec:
     - name: liveness
     image: k8s.gcr.io/liveness
       args:
-      - /server
+      - /readiness
       livenessProbe:
         httpGet:
-          path: /healthz
-          port: 8080
+          path: /liveness
+          port: 5000
           httpHeaders:
           - name: Custom-Header
             value: Awesome
+        failureThreshold: 30
         initialDelaySeconds: 3
         periodSeconds: 3
+        timeoutSeconds: 5
+      readinessProbe:
+        httpGet:
+          path: /readiness
+          port: 5000
+          httpHeaders:
+          - name: Custom-Header
+            value: Awesome
+        failureThreshold: 30
+        initialDelaySeconds: 3
+        periodSeconds: 3
+        timeoutSeconds: 5
