@@ -10,7 +10,6 @@ def index():
 def index():
 	return 'status', 200
 
-
 @app.route('/liveness')
 def index():
 	return 'status', 200
