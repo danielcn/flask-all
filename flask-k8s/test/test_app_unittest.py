@@ -9,12 +9,15 @@ class TestApi(unittest.TestCase):
         with app.test_client() as client:
             response = client.get("/")
             self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.data, b'status 200 index')
 
     def test_index_with_return(self):
         with app.test_client() as client:
             response = client.get('/error')
-            self.assertEqual(response.data, 500)
-    
+
+            self.assertEqual(response.status_code, 500)
+            self.assertEqual(response.data, b'status 500 error')
+
     def test_index_status_200_with_parameter(self):
         with app.test_client() as client:
             response = client.get('/?ready=true')
