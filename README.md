@@ -18,6 +18,7 @@ Repositories description
 - flask-celery: app with defined tasks to add paralelization with celery library
 - flask-feedback-app: general feedback app example
 - flask-jwt: app to perfom authentitacion using jwt
+- flask-k8s: app with the basic k8s implementation
 - flask-logging: using logging library to add and get logs
 - flask-login-decorator: app axample to demostrate how to use decorator for login
 - flask-migrate: app example to demonstrate the migrations steps using alembic
@@ -92,6 +93,8 @@ Repositories
 [flask-feedback-app](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 [flask-jwt](https://github.com/danielcn/flask-all/tree/master/flask-jwt)
+
+[flask-k8s](https://github.com/danielcn/flask-all/tree/master/flask-k8s)
 
 [flask-logging](https://github.com/danielcn/flask-all/tree/master/flask-logging)
 
