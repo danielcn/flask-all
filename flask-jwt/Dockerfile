@@ -1,4 +1,4 @@
-FROM python:3.8.3-slim-stretch
+FROM python:3.9.5-slim-stretch
 
 RUN mkdir /app
 COPY . /app
